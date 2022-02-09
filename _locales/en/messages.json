@@ -1,0 +1,8 @@
+{
+  "authsteem": {
+    "message": "AuthSteem"
+  },
+  "description": {
+    "message": "A steem wallet and signature extension."
+  }
+}
