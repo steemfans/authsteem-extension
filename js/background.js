@@ -1,6 +1,17 @@
-let color = '#3aa757';
+const BACKGROUND_PORT_TAG = 'authsteem_background';
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.sync.set({ color });
-  console.log('Default background color set to %cgreen', `color: ${color}`);
+chrome.runtime.onConnect.addListener(function(port) {
+  console.log('port connected: ', port.name);
+  console.assert(port.name === BACKGROUND_PORT_TAG);
+  // receive msg
+  port.onMessage.addListener(function(msg) {
+    switch (msg.command) {
+      case 'testRequest':
+        port.postMessage({
+          request_id: msg.request_id,
+          response: 'finish',
+        });
+        break;
+    }
+  });
 });
