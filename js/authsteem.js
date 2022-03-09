@@ -25,7 +25,7 @@ const authsteem = {
       command: 'testRequest',
       data: 'test',
     }, function(res) {
-      console.log('[test request callback]: ', res);
+      console.log('[fe got message from transport]: ', res);
     });
   },
 };

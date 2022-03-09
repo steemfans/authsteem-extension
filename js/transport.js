@@ -30,13 +30,13 @@ function sendMsgToFe(msg) {
 
 // get msg from fe and send it to background
 document.addEventListener("transport", function(request) {
-  console.log('[transport got msg from fe]: ', request, request.target.location.origin);
+  console.log('[transport got msg from fe]: ', request);
   port.postMessage(request.detail);
 });
 
 // get msg from background
 port.onMessage.addListener(function(msg) {
-  console.log('from background at transport:', msg);
+  console.log('[transport got msg from background]: ', msg);
   sendMsgToFe(msg);
 });
 

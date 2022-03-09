@@ -5,6 +5,7 @@
   "version": "0.0.1",
   "manifest_version": 3,
   "permissions": [
+    "tabs"
   ],
   "action": {
     "default_icon": {
