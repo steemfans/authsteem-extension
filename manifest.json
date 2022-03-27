@@ -14,7 +14,7 @@
       "32": "/images/logo.png"
     },
     "default_title": "AuthSteem",
-    "default_popup": "/html/popup.html"
+    "default_popup": "/dist/index.html"
   },
   "icons": {
     "16": "/images/logo.png",
